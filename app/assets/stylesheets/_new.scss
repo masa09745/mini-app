@@ -1,0 +1,12 @@
+.new-blog{
+  width: 980px;
+  height: 100vh;
+  margin: 50px auto;
+  .content{
+    margin: 35px 0;
+    .blog-content {
+      resize: none;
+      height:300px;
+    }
+  }
+}
