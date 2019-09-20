@@ -1,33 +1,20 @@
-%nav
-  .nav-wrapper.indigo.darken-3
-    %a.brand-logo{:href => "#"} Mini-App
-    %ul#nav-mobile.right.hide-on-med-and-down
-      - if user_signed_in?
-        %li
-          = link_to 'Post Blog', new_blog_path
-        %li
-          = link_to 'Sign Out', destroy_user_session_path, method: :delete
-      - else
-        %li
-          = link_to 'Sign In', new_user_registration_path
-        %li
-          = link_to 'New Account', new_user_session_path
-
+= render 'shared/nav'
 .contents
-  .user-name
-    -if user_signed_in?
-      = current_user.name
+  .user
+    .user-name
+      -if user_signed_in?
+        = current_user.name
 
-  .row
-  - @blogs.each do |blog|
-    .col.s12
-      .card.blue-grey.darken-1
-        .card-content.white-text
-          %span.card-title
-            = blog.title
-        .card-action
-          - if user_signed_in?
-            =link_to 'Edit blog', edit_blog_path(blog.id)
-            =link_to 'Delete blog', blog_path(blog.id), method: :delete
+  .blogs
+    - @blogs.each do |blog|
+      .col.s12
+        .card.indigo.darken-3
+          .card-content.white-text
+            %span.card-title
+              = blog.title
+          .card-action
+            - if user_signed_in?
+              =link_to 'Edit blog', edit_blog_path(blog.id)
+              =link_to 'Delete blog', blog_path(blog.id), method: :delete
 
 

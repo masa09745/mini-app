@@ -1,13 +1,5 @@
-.new-blog
-  %h2 Blog投稿フォーム
-  .row
-    .col.s12
-      = form_for @blog do |f|
-        .row
-          .input-field.col.s12
-            =f.text_field :title, class: 'textfield'
+= render 'shared/nav'
 
-        .content
-          %h5 本文
-          =f.text_area :content, class: 'blog-content'
-        = f.submit 'Send', class: 'send-btn'
+.new-blog
+  %h3 Blog投稿フォーム
+  = render 'shared/form'

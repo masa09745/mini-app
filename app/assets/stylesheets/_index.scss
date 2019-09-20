@@ -1,5 +1,19 @@
 .contents{
-  width: 980px;
+  width: 100vw;
   height: 100vh;
-  margin: 50px auto;
+  .user{
+    width: 250px;
+    height: 100%;
+    float: left;
+    padding: 15px;
+    background-color:#9fa8da;
+    &-name{
+      font-size: 25px;
+    }
+  }
+  .blogs{
+    width: calc(100vw - 250px);
+    padding: 50px;
+    float: right;
+  }
 }
