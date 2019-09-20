@@ -2,14 +2,19 @@
   .nav-wrapper.indigo.darken-3
     %a.brand-logo{:href => "#"} Mini-App
     %ul#nav-mobile.right.hide-on-med-and-down
-      %li
-        %a{:href => "sass.html"} Sign In
-      %li
-        %a{:href => "badges.html"} Sign Out
-      %li
-        %a{:href => "collapsible.html"} New Account
+      - if user_signed_in?
+        %li
+          = link_to 'Sign Out', destroy_user_session_path, method: :delete
+      - else
+        %li
+          = link_to 'Sign In', new_user_registration_path
+        %li
+          = link_to 'New Account', new_user_session_path
 
 .contents
+  .user-name
+    -if user_signed_in?
+      = current_user.name
   .blogs
     .row
     .col.s12.m6
