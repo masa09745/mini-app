@@ -32,6 +32,11 @@ class BlogsController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @blog = Blog.find(params[:id])
+
+  end
+
 
   private
   def blog_params
