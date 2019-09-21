@@ -4,6 +4,8 @@
     .user-name
       -if user_signed_in?
         = current_user.name
+    .user-detail.waves-effect.waves-light.btn-large.indigo.darken-3
+      =link_to 'Detail', user_path(current_user.id), method: :get
 
   .blogs
     - @blogs.each do |blog|
@@ -12,10 +14,8 @@
           .card-content.white-text
             %span.card-title
               = blog.title
+            .user-name
+              Creater :
+              =blog.user.name
           .card-action
             =link_to 'Show blog', blog_path(blog.id), method: :get
-            - if user_signed_in?
-              =link_to 'Edit blog', edit_blog_path(blog.id)
-              =link_to 'Delete blog', blog_path(blog.id), method: :delete
-
-

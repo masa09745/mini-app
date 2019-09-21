@@ -5,9 +5,19 @@
   &-title{
     font-size: 35px;
     margin-bottom: 35px;
-    
   }
   &-content{
     font-size: 16px;
   }
+}
+
+.user-room{
+  width: 980px;
+  height: 100vh;
+  margin: 50px auto;
+  &__blogs{
+    height: 500px;
+    padding: 30px;
+  }
+
 }
