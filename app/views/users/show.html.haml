@@ -15,3 +15,4 @@
             - if user_signed_in?
               =link_to 'Edit blog', edit_blog_path(blog.id)
               =link_to 'Delete blog', blog_path(blog.id), method: :delete
+  = paginate(@blogs)

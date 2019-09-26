@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   def index
-    @blogs=Blog.all.order("created_at DESC")
+    @blogs=Blog.all.page(params[:page]).order('created_at DESC').per(3)
   end
 
   def new
@@ -34,6 +34,8 @@ class BlogsController < ApplicationController
 
   def show
     @blog = Blog.find(params[:id])
+    @comment = Comment.new
+    @comments = @blog.comments.includes(:user).page(params[:page]).order('created_at DESC').per(3)
 
   end
 
