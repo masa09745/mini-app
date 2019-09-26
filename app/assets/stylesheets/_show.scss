@@ -1,13 +1,50 @@
 .blog{
+  width: 800px;
+  height: 300px;
+  margin: 50px auto;
+  &-title{
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+  &-content{
+    font-size: 20px;
+  }
+}
+
+.comments{
+  width: 800px;
+  height: 100px;
+  margin: 25px auto;
+  &-new{
+    &__text{
+      resize: none;
+    }
+  }
+  &-list{
+    width: 800px;
+    margin: 20px auto;
+    &__name{
+      font-size: 12px;
+    }
+    &__text{
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+  }
+  nav{
+    background-color:#283593
+    }
+}
+
+.user-room{
   width: 980px;
   height: 100vh;
   margin: 50px auto;
-  &-title{
-    font-size: 35px;
-    margin-bottom: 35px;
-    
+  &__blogs{
+    height: 500px;
+    margin: 30px auto;
   }
-  &-content{
-    font-size: 16px;
-  }
+  nav{
+    background-color:#283593
+    }
 }

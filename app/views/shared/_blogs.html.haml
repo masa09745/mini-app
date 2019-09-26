@@ -1,0 +1,13 @@
+.blogs
+  - @blogs.each do |blog|
+    .col.s12
+      .card.indigo.darken-3
+        .card-content.white-text
+          %span.card-title
+            = blog.title
+          .user-name
+            Creater :
+            =blog.user.name
+        .card-action
+          =link_to 'Show blog', blog_path(blog.id), method: :get
+  = paginate(@blogs)
