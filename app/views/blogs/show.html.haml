@@ -16,9 +16,7 @@
   .comments-list
     %h6 コメント一覧
     - @comments.each do |comment|
-      .comments-list__name
-        commented at
-        = comment.user.name
+      = link_to comment.user.name, "/users/#{comment.user_id}",class: "comments-list__name"
       .comments-list__text
         = comment.text
     = paginate(@comments)
