@@ -8,17 +8,12 @@
     = @blog.content
 
 .comments
-  .comments-new
-    %h6 コメントする
-    = form_for [@blog,@comment] do |f|
-      = f.text_area :text, class: 'comments-new__text'
-      = f.submit 'Send', class: 'waves-effect waves-light btn-large indigo darken-3'
-  .comments-list
-    %h6 コメント一覧
-    - @comments.each do |comment|
-      .comments-list__name
-        commented at
-        = comment.user.name
-      .comments-list__text
-        = comment.text
-    = paginate(@comments)
+  .comments-box
+    %p コメント
+    .comments-box__count
+      = @comments_count
+  .comments_area
+    = render partial: 'comments/list', locals: { comment: @comment}
+.comment-form
+  - if user_signed_in?
+    = render partial: 'comments/form', locals: { comment: @comment}

@@ -1,10 +1,13 @@
 .blog{
   width: 800px;
-  height: 300px;
-  margin: 50px auto;
+  height: 500px;
+  padding:  35px;
+  margin: 50px auto 15px;
+  border: 1px solid #ddd;
   &-title{
     font-size: 30px;
     margin-bottom: 25px;
+    border-bottom: 1px solid #38aef0;
   }
   &-content{
     font-size: 20px;
@@ -13,27 +16,27 @@
 
 .comments{
   width: 800px;
-  height: 100px;
-  margin: 25px auto;
-  &-new{
-    &__text{
-      resize: none;
+  margin: 0 auto;
+  &-box{
+    height: 30px;
+    display: flex;
+    align-items: flex-end;
+    margin: 5px 0px;
+    p{
+      font-size: 20px;
+      margin-right: 10px;
     }
   }
-  &-list{
-    width: 800px;
-    margin: 20px auto;
-    &__name{
-      font-size: 12px;
-    }
-    &__text{
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
+}
+.comment-form{
+  width: 800px;
+  margin: 0 auto;
+  i{
+    background-color:#283593;
+    .waves-button-input{
+      color: white;
+      }
   }
-  nav{
-    background-color:#283593
-    }
 }
 
 .user-room{

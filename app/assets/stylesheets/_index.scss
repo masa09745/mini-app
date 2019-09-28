@@ -11,9 +11,16 @@
     padding: 15px;
     background-color:#9fa8da;
     &-name{
-      font-size: 25px;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .user-detail.waves-effect.waves-light.btn.indigo.darken-3{
+      a{
+        color: white;
+      }
     }
   }
+
   .blogs{
     width: calc(100vw - 250px);
     padding: 50px;

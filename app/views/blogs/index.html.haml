@@ -4,7 +4,7 @@
     -if user_signed_in?
       .user-name
         = current_user.name
-      .user-detail.waves-effect.waves-light.btn-large.indigo.darken-3
+      .user-detail.waves-effect.waves-light.btn.indigo.darken-3
         =link_to 'Detail', user_path(current_user.id), method: :get
 
   = render 'shared/blogs'
