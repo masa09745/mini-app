@@ -1,0 +1,4 @@
+= form_for [@blog, @comment], id: "new_comment" do |f|
+  = f.text_field :text, class: "form__comment"
+  = f.submit "Send",class: "btn waves-effect waves-light",type: "submit",name: "action"
+
