@@ -1,7 +1,8 @@
 @import "./reset";
 @import "./index";
-@import "./user";
-@import "./new";
-@import "./edit";
-@import "./show";
+@import "user/user";
+@import "blogs/new";
+@import "blogs/edit";
+@import "blogs/show";
+@import "user/show";
 
