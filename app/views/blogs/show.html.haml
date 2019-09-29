@@ -5,13 +5,14 @@
     = @blog.title
   .blog-content
     %h6 本文
-    = @blog.content
+    .blog-content__image
+      = image_tag @blog.image.url unless @blog.image.blank?
+    .blog-content__text
+      = @blog.content
 
 .comments
   .comments-box
     %p コメント
-    .comments-box__count
-      = @comments_count
   .comments_area
     = render partial: 'comments/list', locals: { comment: @comment}
 .comment-form
