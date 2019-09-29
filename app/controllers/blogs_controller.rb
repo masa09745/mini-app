@@ -38,7 +38,6 @@ class BlogsController < ApplicationController
     @comments = @blog.comments.includes(:user).order('created_at DESC')
   end
 
-
   private
   def blog_params
     params.require(:blog).permit(:title,:content,:image).merge(user_id: current_user.id)

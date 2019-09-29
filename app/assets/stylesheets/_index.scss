@@ -1,35 +1,12 @@
 .nav-wrapper.indigo.darken-3{
   padding: 0 25px;
 }
-.contents{
-  width: 100vw;
-  height: 100vh;
-  .user{
-    width: 250px;
-    height: 100%;
-    float: left;
-    padding: 15px;
-    background-color:#9fa8da;
-    &-name{
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-    .user-detail.waves-effect.waves-light.btn.indigo.darken-3{
-      a{
-        color: white;
-      }
-    }
+.blogs{
+  padding: 50px 100px;
+  .user-name{
+    font-size: 15px;
   }
-
-  .blogs{
-    width: calc(100vw - 250px);
-    padding: 50px;
-    float: right;
-    .user-name{
-      font-size: 15px;
-    }
-    nav{
-      background-color:#283593
-    }
+  nav{
+    background-color:#283593
   }
 }
