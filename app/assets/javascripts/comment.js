@@ -26,7 +26,7 @@ $(function(){
       var html = buildHTML(data);
       $('.form__comment').val('');
       $('.comments_area').prepend(html);
-      $('.waves-effect.waves-light.btn-large.indigo.darken-3').attr('disabled', false);
+      $('.waves-button-input').prop('disabled', false);
     })
     .fail(function(){
       alert('error');
